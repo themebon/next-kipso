@@ -28,7 +28,6 @@ const HomePageThree = () => {
             <VideoThree />
             <BrandsTwo />
             <CallToActionFive />
-
             <Footer />
         </Layout>
     );

@@ -25,8 +25,6 @@ const HomePageTwo = () => {
             <MeetingOne />
             <CallToActionTwo />
             <BlogThree />
-
-
             <Footer />
         </Layout>
     );

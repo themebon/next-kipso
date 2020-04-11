@@ -18,11 +18,11 @@ const CountdownKipso = () => {
                                 nibh id eis
                                 sed
                                 odio sit amet.</p>
-                            <ul className="countdown-one__list list-unstyled">
+                            <div className="countdown-one__list list-unstyled">
 
                                 <Countdown date={Date.now() + 5000000000} />
 
-                            </ul>
+                            </div>
                         </div>
                     </div>
                     <div className="col-lg-6">

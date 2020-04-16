@@ -13,6 +13,9 @@ class NavOne extends Component {
 
         //Mobile Menu
         this.mobileMenu();
+
+        //Search Toggle
+        this.serachButton();
     }
 
     componentWillUnmount() {
@@ -40,6 +43,25 @@ class NavOne extends Component {
 
         mainNavToggler.addEventListener("click", function () {
             mainNav.style.display = ( (mainNav.style.display != "block" ? "block" : "none" ) );
+        });
+    }
+
+    serachButton = () => {
+        let searchToggle = document.querySelector(".search-toggle");
+        let searchPopup = document.querySelector(".search-popup");
+        let searchClose = document.querySelector(".cancel");
+        let searchOverlay = document.querySelector(".search-overlay");
+
+        searchToggle.addEventListener("click", function () {
+            searchPopup.classList.add('active');
+        });
+
+        searchClose.addEventListener("click", function () {
+            searchPopup.classList.remove('active');
+        });
+
+        searchOverlay.addEventListener("click", function () {
+            searchPopup.classList.remove('active');
         });
     }
 
@@ -117,6 +139,11 @@ class NavOne extends Component {
                                     <Link href="/contact"><a>Contact</a></Link>
                                 </li>
                             </ul>
+                        </div>
+                        <div className="right-side-box">
+                            <a className="header__search-btn search-popup__toggler search-toggle" href="#"><i
+                                className="kipso-icon-magnifying-glass"></i>
+                            </a>
                         </div>
                     </div>
                 </nav>
